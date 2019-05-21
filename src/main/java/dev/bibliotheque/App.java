@@ -14,16 +14,18 @@ public class App
     {
     	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("bibliotheque-jpa");
     	EntityManager em = entityManagerFactory.createEntityManager();
-    	Query query = null;
+    	TypedQuery<Livre> query = null;
     	String titreRecherche = "Guerre et paix";
     	
     	//Recherche avec find
-    	Livre livre = em.find(Livre.class, 3);
+    	Livre livre = em.find(Livre.class, 1);
     	
     	System.out.println("find : "+livre);
     	
     	//Recherche avec query
-    	query = em.createQuery("select * from livre where titre = \""+titreRecherche+"\"");
-    	livre = (Livre) query.getResultList().get(0);
+    	query = em.createQuery("select l from Livre l where l.titre = '"+titreRecherche+"'", Livre.class);
+    	livre = query.getResultList().get(0);
+    	
+    	System.out.println("query : "+livre);
     }
 }
