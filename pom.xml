@@ -9,8 +9,6 @@
 
   <name>bibliotheque</name>
   <url>http://maven.apache.org</url>
-  
- 
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,9 +43,5 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.9</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
-
-
-
   </dependencies>
 </project>
