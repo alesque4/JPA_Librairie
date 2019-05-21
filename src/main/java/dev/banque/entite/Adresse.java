@@ -1,4 +1,4 @@
-package dev.banque.model;
+package dev.banque.entite;
 
 import javax.persistence.*;
 
@@ -20,4 +20,14 @@ public class Adresse {
 	
 	@Column(name="VILLE", nullable=false)
 	private String ville;
+	
+	public Adresse() {super();}
+	
+	public Adresse(int numero, String rue, int codePostal, String ville) {
+		super();
+		this.numero = numero;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+	}
 }

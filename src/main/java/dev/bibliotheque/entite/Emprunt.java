@@ -1,4 +1,4 @@
-package dev.bibliotheque.model;
+package dev.bibliotheque.entite;
 
 import java.util.Date;
 import java.util.Set;
