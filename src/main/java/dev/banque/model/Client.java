@@ -1,6 +1,7 @@
 package dev.banque.model;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -18,6 +19,7 @@ public class Client {
 	private String prenom;
 	
 	@Column(name="DATE_NAISSANCE",  nullable=false)
+	@Temporal(TemporalType.DATE)
 	private LocalDate dateNaissance;
 	
 	@OneToOne
@@ -26,4 +28,7 @@ public class Client {
 	@ManyToOne
 	@JoinColumn(name="ID_BANQUE")
 	private Banque banque;
+	
+	@ManyToMany(mappedBy="clients")
+	private Set<Compte> comptes;
 }
