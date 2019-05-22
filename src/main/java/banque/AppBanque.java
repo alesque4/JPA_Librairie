@@ -25,11 +25,11 @@ public class AppBanque {
     	Client client1 = new Client("Le Chat", "Félix",  LocalDate.of(1970, 3, 3), adr1, banque1);
     	Client client2 = new Client("Michel-Jean", "Jean-Michel",  LocalDate.of(1980, 5, 8), adr2, banque1);
     	Client client3 = new Client("Norbert", "Robert",  LocalDate.of(1990, 2, 10), adr3, banque2);
-    	/*
+
     	banque1.addClient(client1);
     	banque1.addClient(client2);
     	banque2.addClient(client3);
-    	*/
+
     	
     	//Comptes
     	Compte compte1 = new AssuranceVie("1111", 200, 3.2, LocalDate.of(2030, 6, 30));
