@@ -1,10 +1,10 @@
-package dev.bibliotheque;
+package bibliotheque;
 
 import javax.persistence.*;
 
-import dev.bibliotheque.entite.Client;
-import dev.bibliotheque.entite.Emprunt;
-import dev.bibliotheque.entite.Livre;
+import bibliotheque.entite.BibliClient;
+import bibliotheque.entite.Emprunt;
+import bibliotheque.entite.Livre;
 
 /**
  * Hello world!
@@ -12,7 +12,7 @@ import dev.bibliotheque.entite.Livre;
  */
 public class AppBibliotheque 
 {
-    public static void main( String[] args )
+    public static void App( String[] args )
     {
     	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("bibliotheque-jpa");
     	EntityManager em = entityManagerFactory.createEntityManager();
@@ -35,9 +35,9 @@ public class AppBibliotheque
     	
     	//---------- TP2 ----------
     	TypedQuery<Emprunt> queryEmprunt = null;
-    	TypedQuery<Client> queryClient = null;
+    	TypedQuery<BibliClient> queryClient = null;
     	Emprunt emprunt = null;
-    	Client client = null;
+    	BibliClient client = null;
     	int idEmprunt = 1;
     	int idClient = 1;
     	
@@ -54,7 +54,7 @@ public class AppBibliotheque
     	}
     	
     	//Réaliser une requête qui permet d’extraire tous les emprunts d’un client donné.
-    	queryClient = em.createQuery("select e from Client e where id=:id", Client.class);
+    	queryClient = em.createQuery("select e from Client e where id=:id", BibliClient.class);
     	queryClient.setParameter("id", idClient);
     	client = queryClient.getResultList().get(0);
     	

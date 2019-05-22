@@ -1,4 +1,4 @@
-package dev.banque.entite;
+package banque.entite;
 
 import java.time.LocalDateTime;
 
@@ -6,13 +6,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="operation")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Operation {
 	
 	@Id
+	@GeneratedValue
 	private int id;
 	
 	@Column(name="DATE")
-	@Temporal(TemporalType.TIMESTAMP)
 	private LocalDateTime date;
 	
 	@Column(name="MONTANT")
@@ -43,5 +44,37 @@ public class Operation {
 
 	public void setCompte(Compte compte) {
 		this.compte = compte;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public LocalDateTime getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDateTime date) {
+		this.date = date;
+	}
+
+	public double getMontant() {
+		return montant;
+	}
+
+	public void setMontant(double montant) {
+		this.montant = montant;
+	}
+
+	public String getMotif() {
+		return motif;
+	}
+
+	public void setMotif(String motif) {
+		this.motif = motif;
 	}
 }

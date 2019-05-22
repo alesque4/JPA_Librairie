@@ -1,4 +1,4 @@
-package dev.bibliotheque.entite;
+package bibliotheque.entite;
 
 import java.util.Set;
 

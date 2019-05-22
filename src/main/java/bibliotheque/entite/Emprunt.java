@@ -1,4 +1,4 @@
-package dev.bibliotheque.entite;
+package bibliotheque.entite;
 
 import java.util.Date;
 import java.util.Set;
@@ -26,7 +26,7 @@ public class Emprunt {
 	
 	@ManyToOne
 	@JoinColumn(name="ID_CLIENT")
-	private Client client;
+	private BibliClient client;
 	
 	@ManyToMany
 	@JoinTable(name  = "compo",

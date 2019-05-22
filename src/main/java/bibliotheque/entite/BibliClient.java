@@ -1,12 +1,12 @@
-package dev.bibliotheque.entite;
+package bibliotheque.entite;
 
 import java.util.Set;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="client")
-public class Client {
+@Table(name="Bibliclient")
+public class BibliClient {
 
 	@Id
 	@Column(name="ID")
