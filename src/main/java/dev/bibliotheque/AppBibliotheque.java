@@ -2,15 +2,15 @@ package dev.bibliotheque;
 
 import javax.persistence.*;
 
-import dev.bibliotheque.model.Client;
-import dev.bibliotheque.model.Emprunt;
-import dev.bibliotheque.model.Livre;
+import dev.bibliotheque.entite.Client;
+import dev.bibliotheque.entite.Emprunt;
+import dev.bibliotheque.entite.Livre;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class AppBibliotheque 
 {
     public static void main( String[] args )
     {

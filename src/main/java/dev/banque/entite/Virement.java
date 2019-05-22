@@ -1,4 +1,4 @@
-package dev.banque.model;
+package dev.banque.entite;
 
 import javax.persistence.*;
 
@@ -8,4 +8,13 @@ public class Virement extends Operation {
 
 	@Column(name="BENEFICIAIRE")
 	private String beneficiaire;
+
+	public Virement() {
+		super();
+	}
+
+	public Virement(String beneficiaire) {
+		super();
+		this.beneficiaire = beneficiaire;
+	}
 }
